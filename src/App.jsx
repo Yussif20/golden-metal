@@ -7,8 +7,24 @@ import Services from './pages/Services';
 import Project from './pages/Project';
 import Galleries from './pages/Galleries';
 import Contact from './pages/Contact';
+import { useEffect } from 'react';
+import i18next from 'i18next';
 
 function App() {
+  useEffect(() => {
+    const handleDirection = () => {
+      const currentLang = i18next.language;
+      const direction = currentLang === 'ar' ? 'rtl' : 'ltr';
+      document.documentElement.dir = direction;
+    };
+
+    handleDirection();
+    i18next.on('languageChanged', handleDirection);
+
+    return () => {
+      i18next.off('languageChanged', handleDirection);
+    };
+  }, []);
   return (
     <div className="flex flex-col min-h-screen">
       <Header />
