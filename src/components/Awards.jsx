@@ -1,5 +1,5 @@
 import { useTranslation } from 'react-i18next';
-import awardImage from '../assets/award.jpg';
+// import awardImage from '../assets/award.jpg';
 
 function Awards() {
   const { t } = useTranslation();
@@ -16,11 +16,11 @@ function Awards() {
           </p>
         </div>
         <div className="overflow-hidden rounded-xl shadow-2xl">
-          <img
+          {/* <img
             src={awardImage}
             alt="Award"
             className="w-full h-96 object-cover transform hover:scale-105 transition-transform duration-500"
-          />
+          /> */}
         </div>
       </div>
     </section>
