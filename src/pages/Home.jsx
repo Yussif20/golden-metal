@@ -1,8 +1,9 @@
 import Hero from '../components/Hero';
 import Awards from '../components/Awards';
-import BlogSection from '../components/BlogSection';
-import HelpSection from '../components/HelpSection';
-import CTA from '../components/CTA';
+import Solutions from '../components/Solutions';
+import Showcase from '../components/Showcase';
+import Values from '../components/Values';
+import Impact from '../components/Imact';
 
 import AnimatedSection from '../utils/AnimatedSection';
 
@@ -15,15 +16,18 @@ function Home() {
       <AnimatedSection>
         <Awards />
       </AnimatedSection>
-      {/*<AnimatedSection>
-        <BlogSection />
-      </AnimatedSection> */}
-      {/* <AnimatedSection>
-        <HelpSection />
-      </AnimatedSection> */}
-      {/* <AnimatedSection>
-        <CTA />
-      </AnimatedSection> */}
+      <AnimatedSection>
+        <Showcase />
+      </AnimatedSection>
+      <AnimatedSection>
+        <Solutions />
+      </AnimatedSection>
+      <AnimatedSection>
+        <Impact />
+      </AnimatedSection>
+      <AnimatedSection>
+        <Values />
+      </AnimatedSection>
     </div>
   );
 }

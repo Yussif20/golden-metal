@@ -1,5 +1,6 @@
 import { useTranslation } from 'react-i18next';
 import miningVideo from '../assets/mining-video.mp4';
+import { Link } from 'react-router-dom';
 
 function Hero() {
   const { t } = useTranslation();
@@ -25,12 +26,12 @@ function Hero() {
           <p className="text-xl md:text-3xl mb-8 opacity-90">
             {t('hero_subtext')}
           </p>
-          <a
-            href="#contact"
+          <Link
+            to="/services"
             className="inline-block bg-gold text-darkBlue px-8 py-4 text-lg font-semibold rounded-full hover:bg-yellow-400 transition-all duration-300 transform hover:scale-105 animate-pulse-slow"
           >
             {t('hero_button')}
-          </a>
+          </Link>
         </div>
       </div>
     </section>
