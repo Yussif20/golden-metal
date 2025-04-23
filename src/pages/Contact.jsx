@@ -91,14 +91,14 @@ function Contact() {
                   123 Mining Ave, Metal City, MC 12345
                 </p>
               </div>
-              <div className="flex space-x-6 mt-8">
+              <div className="flex space-x-4 mt-6">
                 <a
                   href="https://facebook.com"
-                  className="text-blue-600 hover:text-blue-400 transform hover:scale-110 transition-all duration-300"
+                  className="flex items-center justify-center w-10 h-10 rounded-full bg-blue-600 hover:bg-blue-700 text-white transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
                   aria-label="Facebook"
                 >
                   <svg
-                    className="w-8 h-8"
+                    className="w-5 h-5"
                     fill="currentColor"
                     viewBox="0 0 24 24"
                   >
@@ -107,11 +107,11 @@ function Contact() {
                 </a>
                 <a
                   href="https://twitter.com"
-                  className="text-blue-400 hover:text-blue-300 transform hover:scale-110 transition-all duration-300"
+                  className="flex items-center justify-center w-10 h-10 rounded-full bg-black hover:bg-gray-900 text-white transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-offset-2"
                   aria-label="Twitter"
                 >
                   <svg
-                    className="w-8 h-8"
+                    className="w-5 h-5"
                     fill="currentColor"
                     viewBox="0 0 24 24"
                   >
@@ -120,11 +120,11 @@ function Contact() {
                 </a>
                 <a
                   href="https://linkedin.com"
-                  className="text-blue-700 hover:text-blue-500 transform hover:scale-110 transition-all duration-300"
+                  className="flex items-center justify-center w-10 h-10 rounded-full bg-blue-700 hover:bg-blue-800 text-white transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-blue-700 focus:ring-offset-2"
                   aria-label="LinkedIn"
                 >
                   <svg
-                    className="w-8 h-8"
+                    className="w-5 h-5"
                     fill="currentColor"
                     viewBox="0 0 24 24"
                   >
