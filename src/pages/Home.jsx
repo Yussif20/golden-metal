@@ -3,7 +3,7 @@ import Awards from '../components/Awards';
 import Solutions from '../components/Solutions';
 import Showcase from '../components/Showcase';
 import Values from '../components/Values';
-import Impact from '../components/Imact';
+import Impact from '../components/Impact';
 
 import AnimatedSection from '../utils/AnimatedSection';
 
