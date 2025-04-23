@@ -2,9 +2,9 @@ import { useTranslation } from 'react-i18next';
 import AnimatedSection from '../utils/AnimatedSection';
 
 // Placeholder images (replace with actual images in src/assets/)
-import team1 from '../assets/gallery/gallery1.jpg';
-import team2 from '../assets/gallery/gallery2.jpg';
-import team3 from '../assets/gallery/gallery3.jpg';
+import team1 from '../assets/about/team1.jpg';
+import team2 from '../assets/about/team2.jpg';
+import team3 from '../assets/about/team3.jpg';
 
 function About() {
   const { t } = useTranslation();

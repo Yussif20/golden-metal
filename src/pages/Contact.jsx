@@ -66,29 +66,32 @@ function Contact() {
                 {t('footer_contact')}
               </h2>
               <div className="space-y-4 text-gray-700 dark:text-gray-300">
-                <p className="flex items-center">
+                <a
+                  href="mailto:info@goldenmetal-co.com"
+                  className="flex items-center"
+                >
                   <img
                     src={mailIcon}
                     title="email picture"
                     className="w-6 h-6 mr-3"
                   />
-                  info@goldenmetal.com
-                </p>
-                <p className="flex items-center">
+                  info@goldenmetal-co.com
+                </a>
+                <a href="tel:+966546797765" className="flex items-center">
                   <img
                     src={phoneIcon}
                     title="phone picture"
                     className="w-6 h-6 mr-3"
                   />
-                  +123-456-7890
-                </p>
+                  +966546797765
+                </a>
                 <p className="flex items-start">
                   <img
                     src={placeIcon}
                     title="place picture"
                     className="w-6 h-6 mr-3"
                   />
-                  123 Mining Ave, Metal City, MC 12345
+                  {t('contact_place')}
                 </p>
               </div>
               <div className="flex space-x-4 mt-6">
