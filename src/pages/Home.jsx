@@ -12,10 +12,10 @@ function Home() {
       <AnimatedSection>
         <Hero />
       </AnimatedSection>
-      {/* <AnimatedSection>
+      <AnimatedSection>
         <Awards />
       </AnimatedSection>
-      <AnimatedSection>
+      {/*<AnimatedSection>
         <BlogSection />
       </AnimatedSection> */}
       {/* <AnimatedSection>
