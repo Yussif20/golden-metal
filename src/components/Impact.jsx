@@ -2,7 +2,6 @@ import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
 import AnimatedSection from '../utils/AnimatedSection';
 
-// Placeholder image (replace with actual image in src/assets/)
 import impactImg from '../assets/gallery/gallery6.jpg';
 
 function Impact() {

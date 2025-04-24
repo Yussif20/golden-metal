@@ -44,9 +44,9 @@ function Header() {
             <Link
               key={item.path}
               to={item.path}
-              className={`text-lg font-semibold hover:text-gold transition-colors duration-300 ${
+              className={`text-lg font-semibold hover:text-yellow-400 transition-colors duration-300 ${
                 location.pathname === item.path
-                  ? 'text-gold border-b-2 border-gold'
+                  ? 'text-yellow-400 border-b-2 border-yellow-400'
                   : ''
               }`}
             >
@@ -65,15 +65,56 @@ function Header() {
           </button>
           <ThemeSwitcher />
           <button
-            className="md:hidden text-2xl"
+            className="md:hidden text-2xl text-gray-800 dark:text-gray-300 focus:outline-none"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
+            aria-label="Toggle menu"
           >
-            ☰
+            <svg
+              className="w-8 h-8"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g className="transition-all duration-300 ease-in-out">
+                <path
+                  className={`stroke-2 origin-center ${
+                    isMenuOpen
+                      ? 'rotate-45 translate-y-[6px]'
+                      : 'rotate-0 translate-y-0'
+                  }`}
+                  d="M4 6h16"
+                  style={{
+                    transition:
+                      'transform 0.3s ease-in-out, opacity 0.3s ease-in-out',
+                  }}
+                />
+                <path
+                  className={`stroke-2 ${
+                    isMenuOpen ? 'opacity-0' : 'opacity-100'
+                  }`}
+                  d="M4 12h16"
+                  style={{ transition: 'opacity 0.3s ease-in-out' }}
+                />
+                <path
+                  className={`stroke-2 origin-center ${
+                    isMenuOpen
+                      ? '-rotate-45 translate-y-[-6px]'
+                      : 'rotate-0 translate-y-0'
+                  }`}
+                  d="M4 18h16"
+                  style={{
+                    transition:
+                      'transform 0.3s ease-in-out, opacity 0.3s ease-in-out',
+                  }}
+                />
+              </g>
+            </svg>
           </button>
         </div>
       </div>
       <div
-        className={`md:hidden bg-darkBlue bg-opacity-90 backdrop-blur-md transition-all duration-500 ease-in-out ${
+        className={`md:hidden bg-gray-800 bg-opacity-90 backdrop-blur-md transition-all duration-500 ease-in-out ${
           isMenuOpen
             ? 'max-h-96 opacity-100'
             : 'max-h-0 opacity-0 overflow-hidden'
@@ -83,7 +124,7 @@ function Header() {
           <Link
             key={item.path}
             to={item.path}
-            className="block px-4 py-3 text-lg font-medium hover:text-gold hover:bg-gold hover:bg-opacity-20 transition-all duration-300"
+            className="block px-4 py-3 text-lg font-medium text-white hover:text-yellow-400 hover:bg-yellow-400 hover:bg-opacity-20 transition-all duration-300"
             onClick={() => setIsMenuOpen(false)}
           >
             {item.label}

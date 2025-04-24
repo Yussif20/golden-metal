@@ -3,12 +3,17 @@ import AnimatedSection from '../utils/AnimatedSection';
 
 // Placeholder image (replace with actual image in src/assets/)
 import visionImage from '../assets/gallery/gallery1.jpg';
+import i18n from '../i18n';
 
 function Project() {
   const { t } = useTranslation();
 
   return (
-    <section className="bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-900 dark:to-gray-800 py-16">
+    <section
+      className={`bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-900 dark:to-gray-800 py-16 text-center ${
+        i18n.language === 'ar' ? 'lg:text-right' : 'lg:text-left'
+      }`}
+    >
       <AnimatedSection>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h1 className="text-4xl md:text-5xl font-bold text-blue-900 dark:text-white text-center mb-6">

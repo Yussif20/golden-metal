@@ -1,5 +1,6 @@
 import { useTranslation } from 'react-i18next';
 import AnimatedSection from '../utils/AnimatedSection';
+import i18n from '../i18n';
 
 function About() {
   const { t } = useTranslation();
@@ -16,7 +17,11 @@ function About() {
             {t('about_subtitle')}
           </p>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
-            <div className="flex flex-col justify-center">
+            <div
+              className={`flex flex-col justify-center text-center ${
+                i18n.language === 'ar' ? 'lg:text-right' : 'lg:text-left'
+              }`}
+            >
               <h2 className="text-2xl font-semibold text-blue-900 dark:text-yellow-400 mb-4">
                 {t('about_history')}
               </h2>
@@ -24,7 +29,11 @@ function About() {
                 {t('about_history_desc')}
               </p>
             </div>
-            <div className="flex flex-col justify-center">
+            <div
+              className={`flex flex-col justify-center text-center ${
+                i18n.language === 'ar' ? 'lg:text-right' : 'lg:text-left'
+              }`}
+            >
               <h2 className="text-2xl font-semibold text-blue-900 dark:text-yellow-400 mb-4">
                 {t('about_mission')}
               </h2>
