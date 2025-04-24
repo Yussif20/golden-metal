@@ -114,7 +114,7 @@ function Header() {
         </div>
       </div>
       <div
-        className={`md:hidden bg-gray-800 bg-opacity-90 backdrop-blur-md transition-all duration-500 ease-in-out ${
+        className={`md:hidden dark:bg-gray-800 bg-opacity-90 backdrop-blur-md transition-all duration-500 ease-in-out ${
           isMenuOpen
             ? 'max-h-96 opacity-100'
             : 'max-h-0 opacity-0 overflow-hidden'
@@ -124,7 +124,7 @@ function Header() {
           <Link
             key={item.path}
             to={item.path}
-            className="block px-4 py-3 text-lg font-medium text-white hover:text-yellow-400 hover:bg-yellow-400 hover:bg-opacity-20 transition-all duration-300"
+            className="block px-4 py-3 text-lg font-medium text-gray-800 dark:text-white hover:text-yellow-400 hover:bg-yellow-400 hover:bg-opacity-20 transition-all duration-300"
             onClick={() => setIsMenuOpen(false)}
           >
             {item.label}

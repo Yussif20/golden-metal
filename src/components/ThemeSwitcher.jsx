@@ -5,7 +5,7 @@ const activeCircleStyles =
   'flex items-center justify-center w-5 h-5 rounded-full transition-colors duration-300 ring-2 ring-transparent';
 
 const ThemeSwitcher = () => {
-  const [theme, setTheme] = useState('light');
+  const [theme, setTheme] = useState('dark');
 
   useEffect(() => {
     const savedTheme = localStorage.getItem('theme');
