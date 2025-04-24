@@ -1,18 +1,14 @@
-// src/components/ThemeSwitcher.jsx
 import { useEffect, useState } from 'react';
 
 const activeCircleStyles =
   'flex items-center justify-center w-5 h-5 rounded-full transition-colors duration-300 ring-2 ring-transparent';
 
 const ThemeSwitcher = () => {
-  const [theme, setTheme] = useState('dark');
+  const [theme, setTheme] = useState('dark'); // Default to 'dark'
 
   useEffect(() => {
     const savedTheme = localStorage.getItem('theme');
-    const systemDark = window.matchMedia(
-      '(prefers-color-scheme: dark)'
-    ).matches;
-    const initialTheme = savedTheme || (systemDark ? 'dark' : 'light');
+    const initialTheme = savedTheme || 'dark'; // Default to 'dark' if no saved theme
 
     setTheme(initialTheme);
     document.documentElement.classList.toggle('dark', initialTheme === 'dark');
