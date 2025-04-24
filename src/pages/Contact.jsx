@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import emailjs from '@emailjs/browser';
 import AnimatedSection from '../utils/AnimatedSection';
@@ -17,6 +17,18 @@ function Contact() {
   const [status, setStatus] = useState(null);
   const [isSubmitting, setIsSubmitting] = useState(false);
 
+  // Initialize EmailJS with Public Key
+  useEffect(() => {
+    const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
+    if (publicKey) {
+      emailjs.init(publicKey);
+    } else {
+      console.error(
+        'EmailJS Public Key is missing. Please check your .env file.'
+      );
+    }
+  }, []);
+
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
@@ -25,13 +37,19 @@ function Contact() {
     e.preventDefault();
     setIsSubmitting(true);
 
+    const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+    const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+
+    if (!serviceId || !templateId) {
+      setStatus('error');
+      console.error('Missing EmailJS Service ID or Template ID in .env file.');
+      setIsSubmitting(false);
+      setTimeout(() => setStatus(null), 5000);
+      return;
+    }
+
     emailjs
-      .send(
-        import.meta.env.VITE_EMAILJS_SERVICE_ID || 'your_service_id',
-        import.meta.env.VITE_EMAILJS_TEMPLATE_ID || 'your_template_id',
-        formData,
-        import.meta.env.VITE_EMAILJS_USER_ID || 'your_user_id'
-      )
+      .send(serviceId, templateId, formData)
       .then(
         () => {
           setStatus('success');
@@ -45,7 +63,7 @@ function Contact() {
         },
         (error) => {
           setStatus('error');
-          console.error('EmailJS error:', error);
+          console.error('EmailJS error:', error.text || error);
           setTimeout(() => setStatus(null), 5000);
         }
       )
