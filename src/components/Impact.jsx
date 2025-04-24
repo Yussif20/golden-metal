@@ -1,4 +1,5 @@
 import { useTranslation } from 'react-i18next';
+import { Link } from 'react-router-dom';
 import AnimatedSection from '../utils/AnimatedSection';
 
 // Placeholder image (replace with actual image in src/assets/)
@@ -30,12 +31,12 @@ function Impact() {
               <p className="text-lg text-gray-700 dark:text-gray-300 mb-6">
                 {t('impact_subtitle')}
               </p>
-              <a
-                href="/about"
-                className="inline-block px-6 py-3 bg-yellow-400 text-blue-900 font-semibold rounded-lg hover:bg-yellow-500 dark:hover:bg-yellow-600 transition-colors duration-300 shadow-md mx-auto lg:mx-0"
+              <Link
+                to="/about"
+                className="inline-block px-6 py-3 bg-yellow-400 text-blue-900 font-semibold rounded-lg hover:bg-yellow-500 dark:hover:bg-yellow-600 transition-colors duration-300 shadow-md"
               >
                 {t('impact_cta')}
-              </a>
+              </Link>
             </div>
           </div>
         </div>

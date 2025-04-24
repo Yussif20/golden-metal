@@ -139,7 +139,7 @@ function Contact() {
             {/* Contact Form */}
             <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-8">
               <h2 className="text-2xl font-semibold text-blue-900 dark:text-yellow-400 mb-6">
-                {t('cta_button')}
+                {t('contact_form_title')}
               </h2>
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div>
